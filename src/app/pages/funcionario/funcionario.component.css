@@ -1,0 +1,28 @@
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
+
+table {
+  width: 100%;
+}
+
+.titleAcao {
+  text-align: center;
+}
+
+.botaoAcao{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 11px;
+  margin-top: 10px;
+}
+
+.botaoAcao > button:first-child{
+  margin-right: 2rem;
+}

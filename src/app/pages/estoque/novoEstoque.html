@@ -1,0 +1,39 @@
+<h1 mat-dialog-title class="titleDialog">Novo Estoque</h1>
+<form mat-dialog-content class="content">
+    <div class="form" [formGroup]="formEstoque">
+        <mat-form-field appearance="standard" class="formField form-group">
+            <mat-label>Nome</mat-label>
+            <input matInput type="text" placeholder="Picanha" name="nome" id="nome" formControlName="nome">
+        </mat-form-field>
+        <mat-form-field appearance="standard" class="formField form-group">
+            <mat-label>Categoria do Produto</mat-label>
+            <mat-select placeholder="Ingrediente" name="categoriaProduto" id="categoriaProduto"
+                formControlName="categoriaProduto">
+                <mat-option value="Ingrediente">Ingrediente</mat-option>
+                <mat-option value="Utilitario">Utilitario</mat-option>
+                <mat-option value="Bebida">Bebida</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="standard" class="formField form-group">
+            <mat-label>Quantidade</mat-label>
+            <input matInput type="number" placeholder="5" name="quantidade" id="quantidade"
+                formControlName="quantidade">
+        </mat-form-field>
+        <mat-form-field appearance="standard" class="formField form-group">
+            <mat-label>Unidade</mat-label>
+            <mat-select placeholder="Caixa" name="unidadeQuantidade" id="unidadeQuantidade"
+                formControlName="unidadeQuantidade">
+                <mat-option value="Caixa">Caixa</mat-option>
+                <mat-option value="Cento">Cento</mat-option>
+                <mat-option value="Kilograma">Kilograma</mat-option>
+                <mat-option value="Pacote">Pacote</mat-option>
+                <mat-option value="Peça">Peça</mat-option>
+                <mat-option value="Litro">Litro</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="botoesAcoes">
+            <button mat-raised-button color="primary" (click)="enviarEstoque()">Salvar</button>
+            <button mat-raised-button color="warn" (click)="closeNovoEstoque()">Cancelar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+.toolbarHeader {
+  background-color: #000;
+  color: #ddd;
+}
+
+.linkTitle {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.titleSite {
+  margin-left: 2rem;
+  font-family: "Satisfy", cursive;
+  font-size: xx-large;
+}
+
+.navList {
+  width: 15vw;
+}
+.espacamento-toolbar {
+  flex: 1 1 auto;
+}

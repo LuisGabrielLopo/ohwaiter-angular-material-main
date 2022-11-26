@@ -1,0 +1,146 @@
+{
+  "funcionarios": [
+    {
+      "id": 1,
+      "nome": "Fulano1",
+      "cpf": "63763757074",
+      "funcao": "Coordenador",
+      "ativo": "true"
+    },
+    {
+      "id": 9,
+      "nome": "Peago2",
+      "cpf": "31671662075",
+      "funcao": "cozinheiro",
+      "ativo": "true"
+    },
+    {
+      "id": 10,
+      "nome": "Braoril",
+      "cpf": "82699312096",
+      "funcao": "Coordenador",
+      "ativo": true
+    },
+    {
+      "id": 11,
+      "nome": "Pubela",
+      "cpf": "05055912006",
+      "funcao": "Administrativo",
+      "ativo": false
+    },
+    {
+      "id": 12,
+      "nome": "Xaoulg",
+      "cpf": "33075753092",
+      "funcao": "Administrativo",
+      "ativo": true
+    },
+    {
+      "id": 13,
+      "nome": "Gilnuno",
+      "cpf": "92340211000",
+      "funcao": "Coordenador",
+      "ativo": true
+    },
+    {
+      "id": 14,
+      "nome": "Coinusu",
+      "cpf": "18942946020",
+      "funcao": "Garçom",
+      "ativo": true
+    },
+    {
+      "id": 15,
+      "nome": "Lisai",
+      "cpf": "44234119032",
+      "funcao": "Administrativo",
+      "ativo": false
+    },
+    {
+      "id": 16,
+      "nome": "Hyos",
+      "cpf": "24089023041",
+      "funcao": "Garçom",
+      "ativo": true
+    },
+    {
+      "id": 17,
+      "nome": "Tiepeu",
+      "cpf": "12858284024",
+      "funcao": "Garçom",
+      "ativo": true
+    },
+    {
+      "id": 18,
+      "nome": "Rotryd",
+      "cpf": "24847713044",
+      "funcao": "Administrativo",
+      "ativo": true
+    },
+    {
+      "id": 19,
+      "nome": "Bofdred",
+      "cpf": "73848874024",
+      "funcao": "Administrativo",
+      "ativo": true
+    },
+    {
+      "id": 20,
+      "nome": "Famoa",
+      "cpf": "54577108070",
+      "funcao": "Administrativo",
+      "ativo": false
+    },
+    {
+      "nome": "teste",
+      "cpf": "04692777610",
+      "funcao": "cozinheiro",
+      "ativo": false,
+      "id": 22
+    },
+    {
+      "nome": "teste5",
+      "cpf": "00000000000",
+      "funcao": "coordenador",
+      "ativo": false,
+      "id": 23
+    }
+  ],
+  "estoque": [
+    {
+      "id": 2,
+      "nome": "Vinho",
+      "categoriaProduto": "Bebida",
+      "quantidade": 150,
+      "unidadeQuantidade": "UN"
+    },
+    {
+      "id": 3,
+      "nome": "Carvao",
+      "categoriaProduto": "Utilitario",
+      "quantidade": 16,
+      "unidadeQuantidade": "PC"
+    },
+    {
+      "id": 4,
+      "nome": "Picanha",
+      "categoriaProduto": "Ingrediente",
+      "quantidade": 10,
+      "unidadeQuantidade": "KG"
+    },
+    {
+      "id": 5,
+      "nome": "Cerveja",
+      "categoriaProduto": "Bebida",
+      "quantidade": 305,
+      "unidadeQuantidade": "UN"
+    },
+    {
+      "id": 6,
+      "nome": "teste2",
+      "categoriaProduto": "ingrediente",
+      "quantidade": 15,
+      "unidadeQuantidade": "PC"
+    }
+  ]
+}

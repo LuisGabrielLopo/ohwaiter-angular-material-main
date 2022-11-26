@@ -1,0 +1,7 @@
+.footerToolbar {
+  background-color: black;
+  color: #ddd;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}

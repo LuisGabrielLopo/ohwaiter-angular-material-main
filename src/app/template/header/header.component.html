@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="toolbarHeader">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <a [routerLink]="'/'" class="linkTitle"><span class="titleSite"> OhWaiter</span></a>
+    <span class="espacamento-toolbar"></span>
+    <button mat-icon-button>
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list class="navList">
+
+            <a mat-list-item [routerLink]="'/funcionario'"> Funcionario </a>
+            <a mat-list-item [routerLink]="'/estoque'"> Estoque</a>
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 87vh;">
+
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

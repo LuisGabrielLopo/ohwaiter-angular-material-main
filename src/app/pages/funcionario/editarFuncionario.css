@@ -1,0 +1,27 @@
+.titleDialog {
+    text-align: center;
+  }
+  
+  .formField {
+    width: 20vw;
+  }
+  
+  .content {
+    height: 40vh;
+    width: 30vw;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .botoesAcoes {
+    display: flex;
+  }
+  
+  .botoesAcoes > button {
+    margin: 2rem;
+  }
+  
