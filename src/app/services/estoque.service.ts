@@ -11,7 +11,7 @@ import { Estoque } from '../models/estoque';
   providedIn: 'root',
 })
 export class EstoqueService {
-  url = `http://localhost:8080/estoque`;
+  url = `http://localhost:8082/estoque`;
 
   constructor(private http: HttpClient) {}
 

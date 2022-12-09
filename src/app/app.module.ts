@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, APP_INITIALIZER } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,7 +23,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -35,8 +35,29 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { LoginComponent } from './pages/login/login.component';
 import { PrincipalComponent } from './pages/compartilhado/principal/principal.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
+import { KeycloakAngularModule, KeycloakBearerInterceptor, KeycloakService } from 'keycloak-angular';
 
 export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
+
+
+function initializeKeycloak (keycloak: KeycloakService) {
+  return () =>
+    keycloak.init({
+      config: {
+        url: 'http://localhost:8080',
+        realm: 'ohwaiter',
+        clientId: 'owaiter-web',
+      },
+      initOptions: {
+        onLoad: 'check-sso',
+        silentCheckSsoRedirectUri:
+          window.location.origin + '/assets/silent-check-sso.html',
+      },
+      loadUserProfileAtStartUp: true,
+      enableBearerInterceptor: true
+    });
+}
+
 
 @NgModule({
   declarations: [
@@ -74,7 +95,21 @@ export const options: Partial<null | IConfig> | (() => Partial<IConfig>) = null;
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
+    KeycloakAngularModule,
     NgxMaskModule.forRoot(),
+  ],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService],
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: KeycloakBearerInterceptor,
+      multi: true
+    }
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],

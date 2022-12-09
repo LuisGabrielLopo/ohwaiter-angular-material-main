@@ -12,7 +12,7 @@ import { Injectable } from '@angular/core';
 })
 export class FuncionarioService {
   //json-server //url = 'http://localhost:3000/funcionarios';
-  url = 'http://localhost:8080/funcionario';
+  url = 'http://localhost:8082/funcionario';
 
   constructor(private http: HttpClient) {}
 
