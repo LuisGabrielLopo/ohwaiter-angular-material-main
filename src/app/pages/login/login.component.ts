@@ -17,21 +17,25 @@ import { LoginService } from '../../services/login.service';
 export class LoginComponent implements OnInit {
   public form: FormGroup;
   constructor(private fb: FormBuilder, private router: Router, private loginService: LoginService){}
+  login : string = "";
+  senha : string = "";
+
   ngOnInit() {
     this.form = this.fb.group({
       uname: [null, Validators.compose([Validators.required])],
       password: [null, Validators.compose([Validators.required])]
     });
   }
-  login(){
-    let login = this.form.get('uname')?.value;
-    let senha = this.form.get('password')?.value;
+  logar(){
+     this.login = this.form.get('uname')?.value;
+     this.senha = this.form.get('password')?.value;
     localStorage.removeItem("ohwaitter_access_token");
-    this.loginService.login(login,senha).subscribe(r =>{
-      let token = r.acess_token;
+    this.loginService.login(this.login,this.senha).subscribe(r =>{
+      let token = r.access_token;
       let email = r.login;
       localStorage.setItem("ohwaitter_access_token", token);
       this.router.navigate(['']);
+      console.log(token)
     })
 
   }

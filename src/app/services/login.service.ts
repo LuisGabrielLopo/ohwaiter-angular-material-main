@@ -8,13 +8,13 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginService {
 
-  constructor(private htppClient : HttpClient) {
+  constructor(private httpClient : HttpClient) {
 
    }
    login(login:string, senha:string): Observable<any>{
-    return this.htppClient.post(`${environment.apiUrl}/login`, {'login':login, 'senha':senha});
+    return this.httpClient.post(`${environment.apiUrl}/login`, {'login':login, 'senha':senha});
    }
    criar(login: string, senha:string, cpf:string, nome:string): Observable<any> {
-    return this.htppClient.post(`${environment.apiUrl}/login/criar`, {"login":login, "pass": senha, "nome": nome, "cpf":cpf})
+    return this.httpClient.post(`${environment.apiUrl}/login/criar`, {"login":login, "pass": senha, "nome": nome, "cpf":cpf})
    }
 }

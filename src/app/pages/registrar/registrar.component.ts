@@ -27,7 +27,7 @@ export class RegistrarComponent implements OnInit {
   confirmaSenha:string = "";
   nome:string = "";
   cpf:string = "";
-  concorda:boolean=false;
+  concorda:boolean=true;
 
   mensagem:string ="";
 
@@ -44,9 +44,9 @@ export class RegistrarComponent implements OnInit {
       });
     }
   }
-  //desabilitarBotaoCriar():boolean{
-    //return !this.concorda || this.senha === "" || this.senha !== this.confirmaSenha;
-  //}
+  desabilitarBotaoCriar():boolean{
+    return !this.concorda || this.senha === "" || this.senha !== this.confirmaSenha;
+  }
   validarCampos():boolean{
     let resp:boolean = true;
     if(this.login ===""){

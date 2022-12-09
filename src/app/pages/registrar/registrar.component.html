@@ -49,7 +49,7 @@
               </div>
               
   
-              <button (click)="criar()" mat-raised-button color="primary" class="btn-block btn-lg m-t-20 m-b-20" type="submit" [routerLink]="['/login']" class="link text-info" >Criar sua conta</button>
+              <button (click)="criar()" mat-raised-button color="primary" class="btn-block btn-lg m-t-20 m-b-20" type="submit" [disabled]="desabilitarBotaoCriar()" >Criar sua conta</button>
               
               <div class="text-center" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
                 <span>Já tem conta?

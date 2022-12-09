@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  apiUrl: 'https://localhost:8080/ohwaiter' // Aqui coloca a url do Backend
+  apiUrl: 'http://localhost:8080' // Aqui coloca a url do Backend
   ,
   production: false
 };
